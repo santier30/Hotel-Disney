@@ -1,0 +1,178 @@
+html{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(58, 58, 192);
+}
+body{
+  margin:4rem auto auto auto;
+ 
+    
+}
+strong{
+  font-weight: 400;
+}
+section{
+    margin:0 auto;
+    max-width: 1920px;}
+
+#nav-img{
+  background-color: transparent;
+  width: auto;
+  height: 56px;
+  margin: 0;
+}
+#navigation-bar{
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+    position:fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+#navigation-bar h1{
+    flex: 1;
+    margin-left:4rem ;
+    
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 5%;
+    right: -20%;
+    opacity: 0;
+    visibility: hidden;
+    background-color: aqua;
+    height: 100%;
+    
+    transition: opacity 0.5s ease-in-out, right 0.5s ease-in-out, visibility 0s linear 0.5s;
+  }
+  
+  .menu.show {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+.Nav-Link{
+    width: 100%;
+    padding: 1rem;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.Nav-Link:hover{
+    background-color: #000;
+    color: #eee;
+    
+
+    
+}
+
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 1rem;
+    
+  }
+  
+  
+  .hamburger.open:before {
+    content: '\f00d'; 
+  }
+  
+  .hamburger.close:before {
+    content: '\f0c9'; 
+  }
+h2{
+  font-size: 3rem;
+  text-align: center;
+}
+h3{
+  font-size: 2rem;
+  /* clear: both;*/
+}
+h4{
+  color: #c91888;
+  
+}
+h3,h2{
+  margin: 2rem;
+  color: #c91888;
+}
+
+img{
+  margin: 1rem;
+  height: 250px;
+  width: auto;
+
+}
+#POP{
+  float: right;
+}
+#Beach{
+  float: left;
+}
+#Animal{
+  float: right;
+}
+#MicMin{
+  width: 100%;
+  height: auto;
+}
+footer{
+  border-top: solid .3rem #c91888;
+  display: block;
+  
+}
+
+ 
+  @media screen and (min-width: 850px) {
+    #navigation-bar h1{
+      font-size: 0;
+        flex: 1;
+        margin: 0;
+        
+        
+    }
+    #navigation-bar menu{
+        visibility: visible;
+        opacity: 1;
+        flex-direction: row;
+        position: initial;
+        gap: 0;
+        
+    }
+
+    .Nav-Link{
+        
+        font-size: .8rem;
+        padding: 1.1rem;
+        
+    }
+
+    .hamburger {
+        display: none!important; /*Me gustaría saber por qué, si no uso 'important', se salta el 'display: none' hasta que se guarde de nuevo el CSS.*/
+      }
+      footer p {float: right;}
+  }
+
+  @media screen and (min-width: 1000px) {
+
+    #navigation-bar h1{
+        margin-left:4rem ;
+        
+    }
+   
+    .Nav-Link{
+        font-size: 1rem;
+        padding: 1rem;
+        
+    }
+   
+  }
+  
